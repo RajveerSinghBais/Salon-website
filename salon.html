@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project salon</title>
+    <style>
+        body {
+           background-color: #212121;
+           color: azure;
+           margin: 0px;
+           padding: 0px;
+        }
+        
+        .ul{
+            background-color:#313131;
+            height: 45px;   
+            display: flex;
+            list-style:none;
+            justify-content: center ;
+            align-items: center;
+            border-radius: 20px;
+        }
+
+
+        li a{
+            text-decoration: none;
+            padding: 0.5em;
+            margin: 1em;
+            color: rgba(113, 212, 227, 0.779);
+        }
+
+        #home{
+            text-align: center;
+        }
+
+        h1{
+            font-size: 3rem;
+            color: rgb(89, 202, 254);
+        }
+
+        .form-group input{
+            padding-left: 15px;
+            margin-left: 230px;
+            border-radius: 5px;
+            background-color:#414141;
+        }
+
+        .form-group input{
+            display: block;
+            width: 200px;
+            padding: 5px   ;
+            margin: 3px auto ;
+            border-radius: 4px;
+        }
+
+        #web{
+            display: grid;
+            grid-template-columns: 100px auto;
+          
+        }
+        .sidebar{
+            background-color:#313131;;
+            height: 600px;
+            border-radius: 10px;
+        }
+        .btn{
+            margin: 2px ;
+            margin-left: 50px;
+            background-color: #414141;
+        }
+
+        .btn2{
+            margin: 2px ;
+            background-color: #414141;
+        }
+
+        #search{
+            margin-left: 300px;
+        }
+
+        .hair{
+            display: flex;
+        }
+        .haircut{
+            height: 100px;
+            background-color: #414141;
+            margin: 20px;
+            padding: 20px;
+        }
+        li a:hover{
+            color: #d2e4eb;
+        }
+        #sidebar1{
+            visibility: hidden;
+        }
+        #close{
+            margin-right: 350px;
+            margin-left: 5px;
+        }
+        #open{
+            margin-right: 400px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul class="ul">
+            
+            <button class="btn" id="open">
+                open sidebar
+            </button>
+        
+            <li class="nav"><a href="#"class="active">HOME</a></li>
+            <li class="nav"><a href="#">ABOUT US</a></li>
+            <li class="nav"><a href="#">CONTECT US</a></li>
+            <div id="search" class="form-group">
+                <input type="search" placeholder="search">
+            </div>
+        </ul>
+    </div>
+    <div class="grid" id="web">
+        <div id="sidebar1">
+            <section class="sidebar">
+                <button class="btn" id="close">
+                    close
+                </button>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum sapiente doloremque a ea sit quo facilis illum? Minima labore amet aliquid ratione sequi nesciunt dolore, ipsa placeat quae iusto</p>
+            </section>
+        </div>
+        
+        <div>
+        <section id="home">
+            <h1 class="h-primary">My Salon</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet exercitationem odio architecto magni </p>
+            <section class="hair">
+                <div class="haircut">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fugiat?</p>
+                </div>
+                <div class="haircut">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fugiat?</p>
+                </div>
+                <div class="haircut">
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fugiat?</p>
+                </div>
+            </section>
+            <form action="raj.php">
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Enter your Gender">
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder="Enter your Phone No.">
+                </div>
+                <button class="btn2">Submit</button>
+            </form>
+        </section>
+    </div>
+</div>
+    <script>
+        document.getElementById("close").addEventListener("click", function(e){
+            
+            let ram = document.getElementById("sidebar1");
+            ram.style.visibility ="hidden";
+            let dis = document.getElementById("close");
+            let dis2 = document.getElementById("open");
+            dis2.style.visibility = "visible";
+           
+        });
+
+
+        document.getElementById("open").addEventListener("click", function(e){
+            
+            let ram = document.getElementById("sidebar1");
+            ram.style.visibility = "visible";
+            let dis = document.getElementById("open");
+            dis.style.visibility = "hidden";
+            
+            
+        });
+    </script>
+</body>
+</html>
